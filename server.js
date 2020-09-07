@@ -14,7 +14,7 @@ mongoose.Promise = global.Promise;
 var port = process.env.PORT || 1339;
 
 
-mongoose.connect('mongodb://fitness:fitness@ec2-34-216-156-161.us-west-2.compute.amazonaws.com:27017/fitness-db',
+mongoose.connect(process.env.mongodbUri,
     { poolSize: 20, keepAlive: 300000, useNewUrlParser: true, useUnifiedTopology: true });
 
 mongoose
